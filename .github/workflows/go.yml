@@ -1,0 +1,32 @@
+name: Go
+
+on:
+  schedule:
+    - cron: '52 8 * * 3'
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+
+    - name: Build mmdb
+      run: |
+        cd ${GITHUB_WORKSPACE}
+        go run main.go
+      
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Development Build"
+        files: |
+            mmdb/Country.mmdb
