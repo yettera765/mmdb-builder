@@ -13,7 +13,7 @@ tg:
   - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Global-Services/Spotify.list
   - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Global-Services/YouTube.list
   - rule: https://raw.githubusercontent.com/LM-Firefly/Rules/master/Global-Services/Netflix.list
-  - ip: https://raw.githubusercontent.com/QiuSimons/Netflix_IP/master/NF_only.txt
+  - ip: https://raw.githubusercontent.com/QiuSimons/Netflix_IP/master/getflix.txt
   - rule: https://raw.githubusercontent.com/yettera765/rulesets/dev/proxy/proxy.ip.txt
 gd:
   - ip: https://raw.githubusercontent.com/yettera765/rulesets/dev/block/block.ip.txt
